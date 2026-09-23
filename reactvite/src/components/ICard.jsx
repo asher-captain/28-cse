@@ -3,8 +3,8 @@ import React from 'react'
 function ICard({ data }) {
   return (
     <div style={{
-      border: '10px solid red',
-      height: '300px',
+      border: '10px solid white',
+      height: '400px',
       width: '300px'
     }}>
       <img src={data.pic} height={200} width={200} />

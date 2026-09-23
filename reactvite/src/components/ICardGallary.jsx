@@ -4,13 +4,44 @@ import ICard from './ICard'
 import carImage from '../images/Screenshot 2026-02-06 213331.png'
 
 function ICardGallary() {
-    const student = {
+    const student = [{
         pic: carImage,
         roll:"87833",
+        name:"raman",
+        branch:"cse 11",
+        college:"abes ec"
+      },
+      {
+        pic: carImage,
+        roll:"44533",
+        name:"sanah",
+        branch:"cse 27",
+        college:"abes ec"
+      },
+      {
+        pic: carImage,
+        roll:"256433",
+        name:"rakul",
+        branch:"cse 15",
+        college:"abes ec"
+      },
+      {
+        pic: carImage,
+        roll:"98765",
         name:"rahul",
-        branch:"cse",
+        branch:"cse 15",
+        college:"abes ec"
+      },
+      {
+        pic: carImage,
+        roll:"102223",
+        name:"khushi",
+        branch:"cse 28",
         college:"abes ec"
       }
+    
+    
+    ]
 
 
   return (
@@ -19,7 +50,7 @@ function ICardGallary() {
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'center',
-        gap: '20px'
+        // gap: '20px'
       }}
     >
 
@@ -48,7 +79,14 @@ function ICardGallary() {
         college="ABES Engineering College"
       /> */}
 
-      <ICard data={student} />
+      {/* <ICard data={student[1]} /> */}
+
+      {
+        student.map((element)=>(
+          <ICard data={element} />
+        ))
+      }
+
 
     </div>
   )
